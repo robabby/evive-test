@@ -1,3 +1,53 @@
+# EVIVE TEST
+
+## Running the app
+
+---
+
+After cloning the app locally `cd` into the `evive-test` directory, run `yarn` to install dependencies and then run `yarn dev` to launch the local webserver.
+
+The app will be available at: [http://localhost:3000](http://localhost:3000)
+
+The implemented API endpoint lives at [http://localhost:3000/api/order](http://localhost:3000/api/order) and expects `POST` requests with a `x-www-form-urlencoded` body. In Postman you will define the `key` as `order` and the `value` as any order format you like (preferrably based on the test examples).
+
+| Key   | Value           |
+| ----- | --------------- |
+| order | Breakfast 1,2,3 |
+| order | Lunch 1,2       |
+
+--
+
+## Running the tests
+
+Run `yarn test __tests__/api/order.test.ts` in a terminal to run the included tests.
+
+--
+
+## Explanation
+
+I opted for Next.js for this test becase:
+
+- I wanted an excuse to use the framework
+- Given more time I would have enjoyed setting up an accompanying UI.
+  - If you open the project in a web browser, you'll see the start of that concept which I bailed out of due to time constraints.
+
+## Improvements
+
+Things I would have changed or improved.
+
+- Better typescript type checking in the API.
+  - I started out developing good type definitions initially, but due to IRL time contraints I wasn't able to invest the effort to reflect that in the API. It can easily be improved to adopt greater type checking.
+- Better separation of concerns in the `createOrder` function in `pages/api/order.ts`
+  - This function is _super_ linear, excessively large and brittle. Given more time I would refactor it into smaller logical components and middleware handlers.
+- In the order of development, (get it working, get it clean, get it fast) this solution is _juuuust_ past "Get it working" and hold a lot of opportunity for imrovement.
+- If I could do it over again, I would have skipped Next.js entirely and instead built a dead-simple Express.js app deployed as a Lambda :shrug:.
+
+---
+
+#### Below is the default readme from `create-next-app`
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
