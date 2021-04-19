@@ -25,7 +25,7 @@ Run `yarn test __tests__/api/order.test.ts` in a terminal to run the included te
 
 ## Explanation
 
-I opted for Next.js for this test becase:
+I opted for Next.js for this test because:
 
 - I wanted an excuse to use the framework
 - Given more time I would have enjoyed setting up an accompanying UI.
@@ -36,10 +36,10 @@ I opted for Next.js for this test becase:
 Things I would have changed or improved.
 
 - Better typescript type checking in the API.
-  - I started out developing good type definitions initially, but due to IRL time contraints I wasn't able to invest the effort to reflect that in the API. It can easily be improved to adopt greater type checking.
+  - I started out developing good type definitions, but due to IRL time contraints I wasn't able to invest the effort to reflect that in the API better. It can easily be improved to adopt greater type checking.
 - Better separation of concerns in the `createOrder` function in `pages/api/order.ts`
   - This function is _super_ linear, excessively large and brittle. Given more time I would refactor it into smaller logical components and middleware handlers.
-- In the order of development, (get it working, get it clean, get it fast) this solution is _juuuust_ past "Get it working" and hold a lot of opportunity for imrovement.
+- In the order of development, (get it working, get it clean, get it fast) this solution is _juuuust_ past "Get it working" and has a lot of opportunity for imrovement.
 - If I could do it over again, I would have skipped Next.js entirely and instead built a dead-simple Express.js app deployed as a Lambda :shrug:.
 
 ---
