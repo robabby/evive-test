@@ -1,0 +1,17 @@
+**/node_modules/*
+**/out/*
+**/.next/*
+**/dist/*
+**/tmp/*
+**/lib/*
+**/legacy/*
+
+# data definition files
+*.d.ts
+*.json
+*.png
+*.jpg
+*.svg
+
+# Overrides
+!<.prettierrc>

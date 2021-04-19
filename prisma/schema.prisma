@@ -1,0 +1,16 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./db/dev.db"
+}
+
+model Drink {
+  id         Int         @id @default(autoincrement())
+  name       String      @default("Water")
+}
+
+model Breakfast {
+  id         Int         @id @default(autoincrement())
+  main       String      @default("Eggs")
+  side       String      @default("Toast")
+  // drink      Drink
+}
